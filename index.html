@@ -1,12 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welkom op mijn website!</title>
+    <style>
+        /* Algemene opmaak */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #394242; /* Donkerder grijze achtergrond */
+            color: #ff7f00; /* Oranje tekstkleur */
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #ff7f00; /* Oranje kleur voor de kop */
+            margin-top: 50px;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #ff7f00; /* Oranje kleur voor de paragraaf */
+        }
+
+        /* Afbeelding styling */
+        .logo {
+            width: 200px;
+            margin-top: 30px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.1);
+        }
+
+        /* Styling voor de footer */
+        footer {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            font-size: 0.9em;
+            color: #777;
+        }
+
+        a {
+            color: #ff7f00; /* Oranje kleur voor de links */
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <h1>Hallo, wereld!</h1>
-    <p>Dit is mijn eerste website met GitHub Pages! Ik hoop dat je het mooi vind</p>
+    <p>Dit is mijn eerste website met GitHub Pages! Ik hoop dat je het mooi vind.</p>
+
+    <!-- Klikbare afbeelding die naar de URL wijst -->
+    <a href="https://starworx.nl/">
+        <img src="https://starworx.nl/wp-content/uploads/2024/02/web-logo-default.png" alt="Starworx logo" class="logo">
+    </a>
+
+    <!-- Toevoeging van contactinformatie -->
+    <p>Voor vragen kun je contact opnemen met: <a href="mailto:leon@holidaycasa.nl">leon@holidaycasa.nl</a></p>
+
+    <footer>
+        <p>Bezoek ook onze website: <a href="https://starworx.nl/" target="_blank">Starworx.nl</a></p>
+    </footer>
 </body>
 </html>
