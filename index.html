@@ -55,6 +55,37 @@
         a:hover {
             text-decoration: underline;
         }
+
+        /* Styling voor de YouTube video iframe */
+        .video-container {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+        }
+
+        iframe {
+            width: 560px;
+            height: 315px;
+            border: none;
+            border-radius: 10px;
+            display: none; /* Video is eerst verborgen */
+        }
+
+        /* Play knop styling */
+        .play-button {
+            background-color: #ff7f00;
+            color: white;
+            font-size: 1.5em;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .play-button:hover {
+            background-color: #ff6500;
+        }
     </style>
 </head>
 <body>
@@ -62,15 +93,42 @@
     <p>Dit is mijn eerste website met GitHub Pages! Ik hoop dat je het mooi vind.</p>
 
     <!-- Klikbare afbeelding die naar de URL wijst -->
-    <a href="https://starworx.nl/">
-        <img src="https://starworx.nl/wp-content/uploads/2024/02/web-logo-default.png" alt="Starworx logo" class="logo">
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ/">
+        <img src="https://i1.sndcdn.com/artworks-x8zI2HVC2pnkK7F5-4xKLyA-t500x500.jpg" class="logo" id="logoImage">
     </a>
+    </a>
+<br>
+    <!-- Toevoeging van de Play-knop voor video -->
+    <button class="play-button" onclick="playVideo()">Video afspelen</button>
+
+    <!-- Toevoeging van de YouTube video die automatisch afspeelt, in een loop zit en met geluid -->
+    <div class="video-container">
+        <iframe id="videoIframe" src="https://www.youtube.com/embed/lRmhkXllFtU?autoplay=1&loop=1&playlist=lRmhkXllFtU" title="YouTube video" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
 
     <!-- Toevoeging van contactinformatie -->
-    <p>Voor vragen kun je contact opnemen met: <a href="mailto:leon@holidaycasa.es">leon@holidaycasa.es</a></p>
+    <p>Voor vragen kun je contact opnemen met: <a href="mailto:leon@holidaycasa.nl">leon@holidaycasa.nl</a></p>
 
     <footer>
-        <p>Bezoek ook onze website: <a href="https://starworx.nl/" target="_blank">Starworx.nl</a></p>
+        <p>Bezoek ook onze website: <a href="https://www.youtube.com/watch?v=a6lqEmd9Tl0/" target="_blank">https://holidaycasa.es</a></p>
     </footer>
+
+    <script>
+        // JavaScript om de afbeelding te veranderen bij hover
+        const logoImage = document.getElementById('logoImage');
+        logoImage.addEventListener('mouseover', function() {
+            logoImage.src = 'https://static.wikia.nocookie.net/fansekai/images/1/1d/HA_HA_HA_HA.jpg/revision/latest?cb=20220807225343';
+        });
+        logoImage.addEventListener('mouseout', function() {
+            logoImage.src = 'https://i1.sndcdn.com/artworks-x8zI2HVC2pnkK7F5-4xKLyA-t500x500.jpg';
+        });
+
+        // JavaScript om de video te spelen bij klikken op de Play-knop
+        function playVideo() {
+            var iframe = document.getElementById('videoIframe');
+            iframe.style.display = 'block'; // Maak de video zichtbaar
+            iframe.src = iframe.src + "&autoplay=1"; // Start de video met autoplay
+        }
+    </script>
 </body>
 </html>
